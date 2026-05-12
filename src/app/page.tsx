@@ -24,7 +24,14 @@ async function getProjects() {
 
 export default async function Home() {
 
-  const projects = await getProjects();
+
+  let projects = [];
+  // deployment can fail if sanity fetch fails, so we catch errors here
+  try {
+    projects = await getProjects();
+    } catch (error) {
+      console.log("Sanity fetch failed:", error);
+  }
 
   return (
     <main className="bg-[#f8f5f2] text-[#2b2b2b] overflow-hidden">
@@ -290,7 +297,10 @@ export default async function Home() {
       </Reveal>
 
       {/* PROJECT SLIDER */}
-      <ProjectsSlider projects={projects} />
+      //deployment can fail if sanity fetch fails, so we conditionally render the slider only if we have projects
+      {projects?.length > 0 && (
+        <ProjectsSlider projects={projects} />
+      )}
 
       {/* ABOUT */}
       <Reveal>
