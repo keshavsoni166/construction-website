@@ -105,3 +105,42 @@ h2 {
 p {
   font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* SWIPER */
+
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-pagination {
+  margin-top: 30px;
+  position: relative !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #b67859 !important;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* HERO ZOOM */
+
+@keyframes slowZoom {
+
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1.15);
+  }
+}

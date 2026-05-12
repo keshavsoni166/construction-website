@@ -1,3 +1,4 @@
+import LuxuryLoader from "@/components/LuxuryLoader"
 import "./globals.css"
 
 // import Cursor from "@/components/Cursor"
@@ -39,7 +40,7 @@ export default function RootLayout({
 
       <body className="bg-black text-white overflow-x-hidden">
 
-        <Loader />
+        <LuxuryLoader />
 
         {/* <Cursor /> */}
 

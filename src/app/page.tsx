@@ -482,7 +482,7 @@ export default async function Home() {
                 <div className="pt-2">
 
                   <a
-                    href="https://maps.google.com"
+                    href="https://maps.app.goo.gl/C7iV3rch2w8msgan7"
                     target="_blank"
                     className="
                       inline-flex
@@ -499,7 +499,7 @@ export default async function Home() {
                       rounded-full
                     "
                   >
-                    View on Google Maps
+                    Open office location in maps
                   </a>
 
                 </div>
