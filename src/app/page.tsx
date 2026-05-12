@@ -297,7 +297,7 @@ export default async function Home() {
       </Reveal>
 
       {/* PROJECT SLIDER */}
-      //deployment can fail if sanity fetch fails, so we conditionally render the slider only if we have projects
+      {/* deployment can fail if sanity fetch fails, so we conditionally render the slider only if we have projects */}
       {projects?.length > 0 && (
         <ProjectsSlider projects={projects} />
       )}
