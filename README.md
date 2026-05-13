@@ -270,7 +270,7 @@ Production deployment includes:
 
 # Screenshots
 
-/screenshots/homepage.png
+![Homepage](./screenshots/homepage.png)
 
 ---
 
