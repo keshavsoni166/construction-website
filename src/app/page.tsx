@@ -11,7 +11,8 @@ import Reveal from "@/components/Reveal";
 import HeroAnimation from "@/components/HeroAnimation";
 
 async function getProjects() {
-  return client.fetch(`
+  return client.fetch(
+    `
     *[_type == "project"] | order(_createdAt desc){
       _id,
       title,
@@ -19,7 +20,12 @@ async function getProjects() {
       location,
       mainImage
     }
-  `);
+    `,
+    {},
+    {
+      cache: "no-store",
+    }
+  );
 }
 
 export default async function Home() {
